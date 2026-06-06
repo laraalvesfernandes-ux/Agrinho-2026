@@ -1,0 +1,163 @@
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background:#f4f9f4;
+    color:#1f2d1f;
+    line-height:1.7;
+}
+
+/* NAV BAR */
+nav{
+    background:rgba(27,94,32,0.95);
+    backdrop-filter: blur(10px);
+    padding:12px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:600;
+    font-size:14px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    opacity:0.7;
+}
+
+/* HEADER (CORREÇÃO PRINCIPAL DO PROBLEMA) */
+header{
+    background:linear-gradient(135deg,#1b5e20,#43a047);
+    color:white;
+    text-align:center;
+    padding:70px 20px; /* <- AQUI CORRIGE O "GIGANTE" */
+}
+
+header h1{
+    font-size:40px;
+    margin-bottom:10px;
+    letter-spacing:-0.5px;
+}
+
+header p{
+    max-width:800px;
+    margin:10px auto;
+    font-size:18px;
+    opacity:0.95;
+}
+
+/* TOMATE DO HEADER */
+header .tomate{
+    width:110px;
+    margin:10px 0;
+}
+
+/* TOMATE FLUTUANTE */
+#tomateViajante{
+    position:fixed;
+    right:20px;
+    top:120px;
+    width:70px;
+    z-index:9999;
+    filter:drop-shadow(0 8px 20px rgba(0,0,0,.2));
+}
+
+/* SEÇÕES */
+section{
+    width:80%;
+    margin:70px auto;
+    background:white;
+    padding:50px;
+    border-radius:22px;
+    box-shadow:0 10px 35px rgba(0,0,0,0.08);
+
+    opacity:0;
+    transform:translateY(40px);
+    transition:all 0.8s ease;
+}
+
+/* ANIMAÇÃO SCROLL */
+section.aparecer{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* HOVER SUAVE */
+section:hover{
+    transform:translateY(-5px);
+    transition:0.4s ease;
+}
+
+/* IMAGENS */
+.imagem-capitulo{
+    width:100%;
+    height:360px;
+    object-fit:cover;
+    border-radius:16px;
+    margin-bottom:18px;
+    transition:0.4s ease;
+}
+
+.imagem-capitulo:hover{
+    transform:scale(1.02);
+}
+
+/* CAIXA AGRINHO */
+.agrinho{
+    margin-top:18px;
+    padding:15px;
+    border-left:6px solid #2e7d32;
+    background:#eaf6ea;
+    border-radius:10px;
+}
+
+/* SEÇÃO AGRO FORTE DESTACADA */
+#agro-forte{
+    background:linear-gradient(135deg,#e8f5e9,#f1fff3);
+    border-left:8px solid #2e7d32;
+}
+
+/* FUTURO */
+#futuro{
+    background:#f8fbf8;
+}
+
+/* FOOTER */
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:50px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    section{
+        width:92%;
+        padding:30px;
+    }
+
+    header h1{
+        font-size:30px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:6px;
+    }
+
+    #tomateViajante{
+        width:55px;
+        right:10px;
+    }
+}
